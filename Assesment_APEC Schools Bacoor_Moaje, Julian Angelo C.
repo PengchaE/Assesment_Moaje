@@ -1,0 +1,45 @@
+
+const NFTs = []
+
+function mintNFT (_name, _eyecolor, _shirtType, _bling) {
+    const NFT = {
+        "name": _name,
+        "eyecolor": _eyecolor,
+        "shirtType": _shirtType, 
+        "bling": _bling
+        
+    }
+    NFTs.push(NFT);
+    console.log( _name);
+}
+
+
+function listNFTs () {
+    for(let i = 0; i < NFTs.length; i++) {
+        console.log("\n__________________\n")
+        console.log('Name:');
+        console.log(NFTs[i].name);
+        console.log('\nID:  MM-' + NFTs[i].name.length + NFTs[i].eyecolor.length + NFTs[i].shirtType.length + NFTs[i].bling.length + '-22-2');
+        console.log('\nEyecolor: \t\t' + NFTs[i].eyecolor);
+        console.log('Shirt Type; \t' + NFTs[i].shirtType);
+        console.log('Bling: \t\t\t' + NFTs[i].bling);
+    }
+}
+
+
+function getTotalSupply() {
+    console.log('\n' + NFTs.length);
+}
+
+
+console.log("\nMOAJEMINTS")
+console.log("_____________________________\n")
+console.log("Collection:\n")
+mintNFT('Sypha', 'Pink', 'Kimono', 'Cuban Chain')
+mintNFT('Rone', 'Lime', 'Chem suit', 'Chem rings')
+mintNFT('Trynad', 'White', 'Sleeping gown', 'Wand of life')
+mintNFT('Freynyr', 'Red', 'Suit', 'Lamborghini Keychain')
+listNFTs();
+console.log("\n_____________________________\n")
+console.log("Current Count:")
+getTotalSupply();
